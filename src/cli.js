@@ -42,7 +42,7 @@ async function cli() {
         console.log(chalk.bgRed("⛔️ Message is too short"));
         return;
       }
-      console.log("About to do exec");
+
       exec("git diff --cached --name-only", (err, stdout, stderr) => {
         if (err) {
           console.log("\n\n");
@@ -64,6 +64,7 @@ async function cli() {
               chalk.bgWhite("git add") +
               " before trying to commit."
           );
+          return;
         }
       });
 
