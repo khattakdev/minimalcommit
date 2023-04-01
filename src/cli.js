@@ -1,3 +1,4 @@
+import { exec } from "child_process";
 import inquirer from "inquirer";
 import chalk from "chalk";
 
@@ -32,7 +33,20 @@ async function cli() {
       },
     ])
     .then((answer) => {
-      console.log(answer);
+      const message = `${answer.type}: ${answer.message}`;
+
+      exec(`git commit -m "${message}"`, (err, stdout, stderr) => {
+        if (err) {
+          console.log("Something went wrong. Try again!");
+          console.log(err);
+          return;
+        }
+        if (stderr) {
+          console.log(stderr);
+          return;
+        }
+        console.log(stdout);
+      });
     });
 }
 
