@@ -38,10 +38,10 @@ async function cli() {
 
       if (answer.message == "") {
         console.log(chalk.bgRed("⛔️ Message can't be empty"));
-        return;
+        process.exit(0);
       } else if (!answer.message.includes(" ")) {
         console.log(chalk.bgRed("⛔️ Message is too short"));
-        return;
+        process.exit(0);
       }
 
       getStaggedFiles();

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A minimalist approach toward git commits to keep things simple.",
   "main": "./bin/index.js",
+  "bin": {
+    "mct": "bin/index.js"
+  },
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

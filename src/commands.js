@@ -6,11 +6,11 @@ export async function getStaggedFiles() {
   return exec("git diff --cached --name-only", (err, stdout, stderr) => {
     if (err) {
       logExec(err);
-      return;
+      process.exit(0);
     }
     if (stderr) {
       logExec(stderr);
-      return;
+      process.exit(0);
     }
 
     if (stdout.length <= 0) {
@@ -20,7 +20,7 @@ export async function getStaggedFiles() {
           chalk.bgWhite("git add") +
           " before trying to commit."
       );
-      return;
+      process.exit(0);
     }
   });
 }
@@ -29,11 +29,11 @@ export function commitFiles(message) {
   exec(`git commit -m "${message}"`, (err, stdout, stderr) => {
     if (err) {
       logExec(err);
-      return;
+      process.exit(0);
     }
     if (stderr) {
       logExec(stderr);
-      return;
+      process.exit(0);
     }
     console.log(stdout);
   });
