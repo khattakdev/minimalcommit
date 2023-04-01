@@ -1,0 +1,25 @@
+{
+  "name": "minimalcommit",
+  "version": "1.0.0",
+  "description": "A minimalist approach toward git commits to keep things simple.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khattakdev/minimalcommit.git"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "push",
+    "pull"
+  ],
+  "author": "khattakdev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khattakdev/minimalcommit/issues"
+  },
+  "homepage": "https://github.com/khattakdev/minimalcommit#readme"
+}
