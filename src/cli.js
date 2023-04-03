@@ -1,13 +1,14 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-import { commitFiles, getStaggedFiles } from "./commands.js";
+import { commitFiles, getStaggedFiles, checkIfRepoisGit } from "./commands.js";
 
 function logOption(title, description) {
   return chalk.bgWhite(title) + " - " + description;
 }
 
 async function cli() {
+  await checkIfRepoisGit();
   return await inquirer
     .prompt([
       {
