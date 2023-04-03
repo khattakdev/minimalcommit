@@ -8,45 +8,47 @@ function logOption(title, description) {
 }
 
 async function cli() {
-  return await inquirer
-    .prompt([
-      {
-        name: "type",
-        message: "Howdy 👋, What type of changes have you made?",
-        type: "list",
-        choices: [
-          "✨ feat",
-          "🐛 fix",
-          "💥 break",
-          "♻️ ref",
-          "🔖 ver",
-          "📝 docs",
-          "🎨 style",
-          "🛠 config",
-          "📦 misc",
-        ],
-      },
-      {
-        name: "message",
-        message: "Write a commit message ✍️  : ",
-        type: "input",
-      },
-    ])
-    .then((answer) => {
-      const message = `${answer.type}: ${answer.message}`;
-      console.log("\n");
+  const res = await getStagedFiles();
+  if (res) {
+    return await inquirer
+      .prompt([
+        {
+          name: "type",
+          message: "Howdy 👋, What type of changes have you made?",
+          type: "list",
+          choices: [
+            "✨ feat",
+            "🐛 fix",
+            "💥 break",
+            "♻️ ref",
+            "🔖 ver",
+            "📝 docs",
+            "🎨 style",
+            "🛠 config",
+            "📦 misc",
+          ],
+        },
+        {
+          name: "message",
+          message: "Write a commit message ✍️  : ",
+          type: "input",
+        },
+      ])
+      .then((answer) => {
+        const message = `${answer.type}: ${answer.message}`;
+        console.log("\n");
 
-      if (answer.message == "") {
-        console.log(chalk.bgRed("⛔️ Message can't be empty"));
-        process.exit(0);
-      } else if (!answer.message.includes(" ")) {
-        console.log(chalk.bgRed("⛔️ Message is too short"));
-        process.exit(0);
-      }
+        if (answer.message == "") {
+          console.log(chalk.bgRed("⛔️ Message can't be empty"));
+          process.exit(0);
+        } else if (!answer.message.includes(" ")) {
+          console.log(chalk.bgRed("⛔️ Message is too short"));
+          process.exit(0);
+        }
 
-      getStagedFiles();
-      commitFiles(message);
-    });
+        commitFiles(message);
+      });
+  }
 }
 
 export default cli;
