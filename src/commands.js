@@ -2,7 +2,7 @@ import { exec } from "child_process";
 import chalk from "chalk";
 import { logExec } from "./helper.js";
 
-export async function getStaggedFiles() {
+export async function getStagedFiles() {
   return exec("git diff --cached --name-only", (err, stdout, stderr) => {
     if (err) {
       logExec(err);

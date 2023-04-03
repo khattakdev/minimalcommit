@@ -1,7 +1,7 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 
-import { commitFiles, getStaggedFiles } from "./commands.js";
+import { commitFiles, getStagedFiles } from "./commands.js";
 
 function logOption(title, description) {
   return chalk.bgWhite(title) + " - " + description;
@@ -44,7 +44,7 @@ async function cli() {
         process.exit(0);
       }
 
-      getStaggedFiles();
+      getStagedFiles();
       commitFiles(message);
     });
 }
