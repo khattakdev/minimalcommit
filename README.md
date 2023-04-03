@@ -36,9 +36,10 @@ npm install -g minimalcommit
 
 ## Usage
 ```
-msc
+mct
 ```
-![Minimal commit demo](https://user-images.githubusercontent.com/37709578/229308874-07cf3642-a270-4ec4-a003-d3c1fcdffd5f.gif)
+
+![Minimal Commit demo](https://user-images.githubusercontent.com/37709578/229569956-592effaa-63e6-4f15-8870-6c5f9061f19f.gif)
 
 
 ## How to write commits?
