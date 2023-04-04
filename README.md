@@ -1,7 +1,7 @@
 # Minimal Commit
 
 > _A minimalist approach toward `git commit` to keep commits simple._
-https://user-images.githubusercontent.com/37709578/229779509-22166f89-45f2-484d-a034-261da1b3c9c2.png
+![alt text]https://user-images.githubusercontent.com/37709578/229779509-22166f89-45f2-484d-a034-261da1b3c9c2.png
 ## What is Minimal Commit?
 
 Minimal commit is a Node.js based CLI (command line interface) tool that helps you and your team mates to stay consistent with the `git commit` messages. To commit files using **Minimal Commit**, you have a list of options to choose from, this list consist type of work you did. This makes things simple and less confusing by choosing an option from a list.
