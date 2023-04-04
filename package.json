@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "A minimalist approach toward git commits to keep things simple.",
   "main": "./bin/index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
   "bin": {
     "mct": "bin/index.js"
   },
@@ -31,5 +34,13 @@
     "eslint": "^8.37.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --fix"
   }
 }
