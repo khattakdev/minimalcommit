@@ -26,5 +26,8 @@
   "dependencies": {
     "chalk": "^5.2.0",
     "inquirer": "^9.1.5"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7"
   }
 }

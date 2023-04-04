@@ -2,6 +2,7 @@ import { exec } from "child_process";
 import chalk from "chalk";
 import { logExec } from "./helper.js";
 
+
 export function checkIfRepoisGit() {
   return new Promise((resolve) => {
     exec("git rev-parse --is-inside-work-tree", (err, stdout, stderr) => {
@@ -39,6 +40,7 @@ export async function getStaggedFiles() {
       );
       process.exit(0);
     }
+
   });
 }
 
