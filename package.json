@@ -26,5 +26,10 @@
   "dependencies": {
     "chalk": "^5.2.0",
     "inquirer": "^9.1.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0"
   }
 }
