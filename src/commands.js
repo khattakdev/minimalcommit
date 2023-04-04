@@ -23,7 +23,7 @@ export async function getStagedFiles() {
         );
         resolve(null);
       } else {
-        resolve(stdout.trim().split("\n"));
+        resolve(stdout);
       }
     });
   });
