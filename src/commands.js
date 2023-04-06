@@ -83,3 +83,20 @@ export async function getUnstagedFiles() {
     });
   });
 }
+
+export async function stageFiles(files) {
+  return new Promise((resolve, reject) => {
+    exec(`git add ${files}`, (err, stdout, stderr) => {
+      if (err) {
+        logExec(err);
+        reject(err);
+      }
+      if (stderr) {
+        logExec(stderr);
+        reject(stderr);
+      }
+
+      resolve(stdout);
+    });
+  });
+}
