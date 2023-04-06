@@ -82,6 +82,7 @@ const promptToCommit = async () => {
       stageFiles(filesToStage.join(" "));
     })
     .then(() => {
+      console.log(chalk.bgGreenBright("✅ Files Added"));
       addCommit();
     })
     .catch((err) => {
