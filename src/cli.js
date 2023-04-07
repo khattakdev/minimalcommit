@@ -27,6 +27,10 @@ async function cli() {
 
 const promptToCommit = async () => {
   const files = await getUnstagedFiles();
+  if (files.trim().length === 0) {
+    console.log(chalk.bgRed("⛔️ Whops! You haven't made any changes."));
+    process.exit(0);
+  }
   const styledList = files
     .trim()
     .split("\n")
