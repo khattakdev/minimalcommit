@@ -54,6 +54,9 @@ const promptToCommit = async () => {
       if (fileName.startsWith("!")) return fileName.replace("!", "❓");
       return fileName;
     });
+  if (styledList.length < 1) {
+    console.log(chalk.bgRed("No changes made since last commit!"));
+  }
   return await inquirer
     .prompt([
       {
