@@ -137,6 +137,16 @@ const addCommit = async () => {
         console.log(chalk.bgRed("⛔️ Message is too short"));
         process.exit(0);
       }
+      // it includes the prefix as well
+      console.log(message, message.length);
+      if (message.length > 72) {
+        console.log(
+          chalk.bgRed("⛔️ Message is too long") +
+            "\n" +
+            chalk.bgYellow("⚠️ Please keep the message below 72 characters")
+        );
+        process.exit(0);
+      }
 
       commitFiles(message);
     });
