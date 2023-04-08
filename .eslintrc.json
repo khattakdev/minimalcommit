@@ -1,0 +1,31 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": "standard",
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrorsIgnorePattern": "^_"
+      }
+    ],
+    "no-undef": ["error"],
+    "prefer-const": ["error"],
+    "no-var": ["error"],
+    "no-ternary": "error",
+    "no-return-await": "error",
+    "no-plusplus": "error",
+    "eqeqeq": ["error", "always"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "always"]
+  }
+}
