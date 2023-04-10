@@ -113,6 +113,7 @@ const addCommit = async () => {
           "🐛 fix",
           "💥 break",
           "♻️ ref",
+          "🧪 test",
           "🔖 ver",
           "📝 docs",
           "🎨 style",
