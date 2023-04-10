@@ -100,7 +100,7 @@ Following are some more examples:
 
 - You made some changes to the user interface
 
-`🎨 ui: update the auto pages`
+`🎨 style: update the auto pages`
 
 ## Support
 
