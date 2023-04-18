@@ -14,6 +14,7 @@ Following are the nine types of commits.
 - `🐛 fix` to be used for bug fixes
 - `💥 break` to be used for breaking changes
 - `♻️ ref` to be used for making code/folder refactor
+- `🧪 test` to be used for writing test cases
 - `🔖 ver` to be used for version changes
 - `📝 docs` to be used for documentation
 - `🎨 style` to be used for CSS changes
@@ -99,7 +100,7 @@ Following are some more examples:
 
 - You made some changes to the user interface
 
-`🎨 ui: update the auto pages`
+`🎨 style: update the auto pages`
 
 ## Support
 
