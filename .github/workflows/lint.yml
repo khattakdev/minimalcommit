@@ -1,8 +1,6 @@
 name: linter
 
 on:
-  push:
-    branches: [ '*' ]
   pull_request:
     branches: [ master ]
 
