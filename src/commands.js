@@ -2,7 +2,7 @@ import { exec } from "child_process";
 import chalk from "chalk";
 import { logExec } from "./helper.js";
 
-export function checkIfRepoisGit() {
+export function checkIfRepoisGit () {
   return new Promise((resolve, reject) => {
     exec("git rev-parse --is-inside-work-tree", (err, stdout, stderr) => {
       if (stdout == "true\n") resolve(stdout);
@@ -31,7 +31,7 @@ export function checkIfRepoisGit() {
   });
 }
 
-export async function getStagedFiles() {
+export async function getStagedFiles () {
   return new Promise((resolve, reject) => {
     exec("git diff --cached --name-only", (err, stdout, stderr) => {
       if (err) {
@@ -53,7 +53,7 @@ export async function getStagedFiles() {
   });
 }
 
-export function commitFiles(message) {
+export function commitFiles (message) {
   exec(`git commit -m "${message}"`, (err, stdout, stderr) => {
     if (err) {
       logExec(err);
@@ -67,7 +67,7 @@ export function commitFiles(message) {
   });
 }
 
-export async function getUnstagedFiles() {
+export async function getUnstagedFiles () {
   return new Promise((resolve, reject) => {
     exec("git status --porcelain", (err, stdout, stderr) => {
       if (err) {
@@ -84,7 +84,7 @@ export async function getUnstagedFiles() {
   });
 }
 
-export async function stageFiles(files) {
+export async function stageFiles (files) {
   return new Promise((resolve, reject) => {
     exec(`git add ${files}`, (err, stdout, stderr) => {
       if (err) {

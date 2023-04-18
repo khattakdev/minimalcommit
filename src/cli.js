@@ -6,17 +6,17 @@ import {
   getStagedFiles,
   checkIfRepoisGit,
   getUnstagedFiles,
-  stageFiles,
+  stageFiles
 } from "./commands.js";
 
-function logOption(title, description) {
+function logOption (title, description) {
   return chalk.bgWhite(title) + " - " + description;
 }
 
-async function cli() {
+async function cli () {
   const [isGit, stagedFiles] = await Promise.all([
     checkIfRepoisGit(),
-    getStagedFiles(),
+    getStagedFiles()
   ]);
   if (isGit && !stagedFiles) {
     await promptToCommit();
@@ -68,8 +68,8 @@ const promptToCommit = async () => {
         message:
           "Select the files you want to add with, and use (CTRL + D to exit)",
         type: "checkbox",
-        choices: styledList,
-      },
+        choices: styledList
+      }
     ])
     .then((answer) => {
       if (answer.list.length < 1) {
@@ -118,14 +118,14 @@ const addCommit = async () => {
           "📝 docs",
           "🎨 style",
           "🛠 config",
-          "📦 misc",
-        ],
+          "📦 misc"
+        ]
       },
       {
         name: "message",
         message: "Write a commit message ✍️  : ",
-        type: "input",
-      },
+        type: "input"
+      }
     ])
     .then((answer) => {
       const message = `${answer.type}: ${answer.message}`;

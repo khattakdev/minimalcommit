@@ -4,7 +4,8 @@
   "description": "A minimalist approach toward git commits to keep things simple.",
   "main": "./bin/index.js",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
   },
   "bin": {
     "mct": "bin/index.js"

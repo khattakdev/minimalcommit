@@ -1,11 +1,10 @@
+name: linter
 on:
-  push:
-    branches:
-      - master
-      - main
   pull_request:
     branches:
-      - "*"
+      - main
+      - master
+
 jobs:
   build:
     runs-on: ubuntu-latest
