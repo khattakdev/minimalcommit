@@ -5,7 +5,7 @@ import { logExec } from "./helper.js";
 export function checkIfRepoisGit() {
   return new Promise((resolve, reject) => {
     exec("git rev-parse --is-inside-work-tree", (err, stdout, stderr) => {
-      if (stdout == "true\n") resolve(stdout);
+      if (stdout === "true\n") resolve(stdout);
       if (stderr.includes("not a git repository")) {
         console.log("\n\n");
         console.log(

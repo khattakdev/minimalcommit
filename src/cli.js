@@ -6,17 +6,13 @@ import {
   getStagedFiles,
   checkIfRepoisGit,
   getUnstagedFiles,
-  stageFiles,
+  stageFiles
 } from "./commands.js";
-
-function logOption(title, description) {
-  return chalk.bgWhite(title) + " - " + description;
-}
 
 async function cli() {
   const [isGit, stagedFiles] = await Promise.all([
     checkIfRepoisGit(),
-    getStagedFiles(),
+    getStagedFiles()
   ]);
   if (isGit && !stagedFiles) {
     await promptToCommit();
@@ -61,15 +57,15 @@ const promptToCommit = async () => {
   if (styledList.length < 1) {
     console.log(chalk.bgRed("No changes made since last commit!"));
   }
-  return await inquirer
+  await inquirer
     .prompt([
       {
         name: "list",
         message:
           "Select the files you want to add with, and use (CTRL + D to exit)",
         type: "checkbox",
-        choices: styledList,
-      },
+        choices: styledList
+      }
     ])
     .then((answer) => {
       if (answer.list.length < 1) {
@@ -92,7 +88,7 @@ const promptToCommit = async () => {
       console.log(chalk.bgGreenBright("✅ Files Added"));
       addCommit();
     })
-    .catch((err) => {
+    .catch(() => {
       console.log(
         chalk.bgRed("⛔️ Oops, that was not supposed to happen") +
           chalk.bgGrey("If that happens again, please raise an issue")
@@ -101,8 +97,8 @@ const promptToCommit = async () => {
     });
 };
 
-const addCommit = async () => {
-  return await inquirer
+async function addCommit() {
+  await inquirer
     .prompt([
       {
         name: "type",
@@ -118,20 +114,20 @@ const addCommit = async () => {
           "📝 docs",
           "🎨 style",
           "🛠 config",
-          "📦 misc",
-        ],
+          "📦 misc"
+        ]
       },
       {
         name: "message",
         message: "Write a commit message ✍️  : ",
-        type: "input",
-      },
+        type: "input"
+      }
     ])
     .then((answer) => {
       const message = `${answer.type}: ${answer.message}`;
       console.log("\n");
 
-      if (answer.message == "") {
+      if (answer.message === "") {
         console.log(chalk.bgRed("⛔️ Message can't be empty"));
         process.exit(0);
       } else if (!answer.message.includes(" ")) {
@@ -151,6 +147,6 @@ const addCommit = async () => {
 
       commitFiles(message);
     });
-};
+}
 
 export default cli;

@@ -26,6 +26,7 @@
     "no-plusplus": "error",
     "eqeqeq": ["error", "always"],
     "quotes": ["error", "double"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "space-before-function-paren": ["error", "never"]
   }
 }
