@@ -9,7 +9,7 @@ Minimal commit is a Node.js based CLI (command line interface) tool that helps y
 The list of options is limited to only **nine types**. This is done on purpose to keep the list as short as possible to avoid confusion. The more options you have, the more confusing it will be.
 
 ## Types
-Following are the nine types of commits.
+Following are the nine types of commits.ss
 - `✨ feat` to be used for a new feature
 - `🐛 fix` to be used for bug fixes
 - `💥 break` to be used for breaking changes
