@@ -8,7 +8,7 @@ function logOption(title, description) {
 }
 
 async function cli() {
-  const res = await checkIfRepoisGit() && await getStagedFiles();
+  const res = (await checkIfRepoisGit()) && (await getStagedFiles());
   if (res) {
     return await inquirer
       .prompt([
@@ -51,4 +51,13 @@ async function cli() {
   }
 }
 
+if (process.argv[2] === "--help" || process.argv[2] === "-h") {
+  console.log("Command\t\t\tDescription\t\tType");
+  console.log("-------\t\t\t-----------\t\t----");
+  console.log("--help, -h\t\tShow help\t\tBoolean");
+  console.log("--version, -v\t\tShow version number\tBoolean");
+  console.log("--types, -t\t\tShow commit types\tBoolean");
+  console.log("\n");
+  process.exit(0);
+}
 export default cli;
