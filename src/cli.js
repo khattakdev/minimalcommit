@@ -21,7 +21,23 @@ async function cli() {
   if (isGit && !stagedFiles) {
     await promptToCommit();
   } else if (isGit && stagedFiles) {
-    await addCommit();
+    if (process.argv[2] === "--help" || process.argv[2] === "-h") {
+      const options = [
+        { name: "--help , -h", desc: "Show help", type: "boolean" },
+        { name: "--version, -v", desc: "Show version number", type: "boolean" },
+        { name: "--types, -t", desc: "Show commit types", type: "boolean" },
+      ];
+      console.log("Command\t\tDescription\t\tType");
+      console.log("-------\t\t-----------\t\t----");
+      options.forEach((option) => {
+        const { name, desc, type } = option;
+        console.log(`${name.padEnd(16)}${desc.padEnd(24)}${type}`);
+      });
+      console.log("\n");
+      process.exit(0);
+    } else {
+      await addCommit();
+    }
   }
 }
 
@@ -151,6 +167,15 @@ const addCommit = async () => {
 
       commitFiles(message);
     });
+  if (message.argv[2] === "--help" || message.argv[2] === "-h") {
+    console.log("Command\t\t\tDescription\t\tType");
+    console.log("-------\t\t\t-----------\t\t----");
+    console.log("--help, -h\t\tShow help\t\tBoolean");
+    console.log("--version, -v\t\tShow version number\tBoolean");
+    console.log("--types, -t\t\tShow commit types\tBoolean");
+    console.log("\n");
+    process.exit(0);
+  }
 };
 
 export default cli;
