@@ -2,6 +2,9 @@
 
 > _A minimalist approach toward `git commit` to keep commits simple._
 
+![Minimal Commit Image](https://github.com/Haimantika/minimalcommit/assets/32809211/133f42ad-3483-46ee-9bdf-f29a06356737)
+
+
 ## What is Minimal Commit?
 
 Minimal commit is a Node.js based CLI (command line interface) tool that helps you and your team mates to stay consistent with the `git commit` messages. To commit files using **Minimal Commit**, you have a list of options to choose from, this list consist type of work you did. This makes things simple and less confusing by choosing an option from a list.
@@ -101,6 +104,10 @@ Following are some more examples:
 - You made some changes to the user interface
 
 `🎨 style: update the auto pages`
+
+## Contributing
+All code contributions, must go through a pull request and be approved by the maintainer before being merged. This is to ensure a proper review of all the code.
+We truly ❤️ pull requests! If you wish to help, you can learn more about how you can contribute to this project in the [contribution guide](https://github.com/Haimantika/minimalcommit/blob/main/CONTRIBUTING.md).
 
 ## Support
 
