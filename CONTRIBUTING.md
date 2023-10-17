@@ -1,4 +1,46 @@
-Thank you for considering contributing to Minimal Commit! Your contributions are valuable in helping us improve and grow. To ensure a smooth and collaborative development process, please follow these guidelines when working on issues:
+Thank you for considering contributing to Minimal Commit! Your contributions are valuable in helping us improve and grow. 
+
+## Prerequisites
+Before you start contributing to the project, here's the prerequisities that you need to have:
+
+1. **Git:** You'll need Git to clone the repository and manage version control. If Git is not installed, download and install it from [Git Downloads](https://git-scm.com/downloads).
+
+2. **Node.js:** The project is built using Node.js. You can download and install Node.js from [Node.js Downloads](https://nodejs.org/en/download/). Make sure to install a LTS (Long Term Support) version.
+
+3. **npm (Node Package Manager):** npm is usually bundled with Node.js. To check if you have npm installed, run the following command in your terminal: `npm v` 
+
+4. If it's not installed, you can update it using the following command: `npm install -g npm`
+
+
+## Local Setup
+
+Follow these steps to set up the "minimalcommit" project locally on your machine:
+
+1. **Fork the Repository:**
+To set up a working development environment, just fork the project git repository.
+
+2. **Clone the Repository:** 
+Open your terminal and navigate to the directory where you want to store the project. Then, run the following command to clone the repository: `git clone https://github.com/yourusername/minimalcommit.git`
+
+
+3. **Change Directory:**
+Navigate into the project directory: `cd minimalcommit`
+
+4. **Install Dependencies:**
+Use npm to install the project's dependencies: `npm install`
+
+5. **Configure Environment Variables:**
+The project may require environment variables to be set for configuration. Check if there is an `.env` file or any specific instructions in the project's documentation. If required, create an `.env` file and add the necessary variables.
+
+6. **Start the Development Server:**
+To start the development server, run the following command: `npm start`
+This will start the project locally, and you should be able to access it in your web browser at `http://localhost:3000` (or a different port if specified).
+
+7. **Development and Testing:**
+You can now make changes to the project, and it will automatically reload in the browser. Follow the project's documentation for more information on development and testing.
+That's it! You now have the "minimalcommit" project set up locally on your machine, and you can start working on it.
+
+To contribute to minimal commit, please follow these guidelines when working on issues:
 
 ## Check for Existing Issues
 Before you start working on any feature, enhancement, or bug fix, it's important to check if there's an existing issue for it. This helps prevent duplicate work and ensures that the issue is still relevant.
