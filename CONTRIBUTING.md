@@ -40,7 +40,7 @@ There are two ways to test the project:
 
 - **Link the Project Locally:** To test the project locally as a global command, you can use the `npm link` command. First, navigate to the project directory and run the following command:
   ```
-  npm link
+  npm link minimalcommit
   ```
   After linking the project, you can use it as a global command.
 
