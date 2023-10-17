@@ -29,16 +29,23 @@ Navigate into the project directory: `cd minimalcommit`
 4. **Install Dependencies:**
 Use npm to install the project's dependencies: `npm install`
 
-5. **Configure Environment Variables:**
-The project may require environment variables to be set for configuration. Check if there is an `.env` file or any specific instructions in the project's documentation. If required, create an `.env` file and add the necessary variables.
+5. **Testing the Project:**
 
-6. **Start the Development Server:**
-To start the development server, run the following command: `npm start`
-This will start the project locally, and you should be able to access it in your web browser at `http://localhost:3000` (or a different port if specified).
+There are two ways to test the project:
 
-7. **Development and Testing:**
-You can now make changes to the project, and it will automatically reload in the browser. Follow the project's documentation for more information on development and testing.
-That's it! You now have the "minimalcommit" project set up locally on your machine, and you can start working on it.
+- **Run the CLI :** You can test the project by running the CLI using the following command:
+  ```
+  node src/cli.js
+  ```
+
+- **Link the Project Locally:** To test the project locally as a global command, you can use the `npm link` command. First, navigate to the project directory and run the following command:
+  ```
+  npm link
+  ```
+  After linking the project, you can use it as a global command.
+
+That's it! You now have the "minimalcommit" Node.js project set up locally on your machine, and you can start working on it according to the provided instructions.
+
 
 To contribute to minimal commit, please follow these guidelines when working on issues:
 
