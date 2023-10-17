@@ -7,7 +7,7 @@ Before you start contributing to the project, here's the prerequisities that you
 
 2. **Node.js:** The project is built using Node.js. You can download and install Node.js from [Node.js Downloads](https://nodejs.org/en/download/). Make sure to install a LTS (Long Term Support) version.
 
-3. **npm (Node Package Manager):** npm is usually bundled with Node.js. To check if you have npm installed, run the following command in your terminal: `npm v` 
+3. **npm (Node Package Manager):** npm is usually bundled with Node.js. To check if you have npm installed, run the following command in your terminal: `npm -v` 
 
 4. If it's not installed, you can update it using the following command: `npm install -g npm`
 
