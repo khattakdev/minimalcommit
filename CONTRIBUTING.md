@@ -3,7 +3,7 @@ Thank you for considering contributing to Minimal Commit! Your contributions are
 ## Prerequisites
 Before you start contributing to the project, here's the prerequisities that you need to have:
 
-1. **Git:** You'll need Git to clone the repository and manage version control. If Git is not installed, download and install it from [Git Downloads](https://git-scm.com/downloads).
+1. **Git:** You'll need git to clone the repository and manage version control. If git is not installed, download and install it from [Git Downloads](https://git-scm.com/downloads).
 
 2. **Node.js:** The project is built using Node.js. You can download and install Node.js from [Node.js Downloads](https://nodejs.org/en/download/). Make sure to install a LTS (Long Term Support) version.
 
