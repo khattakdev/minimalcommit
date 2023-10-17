@@ -22,7 +22,7 @@ Here's how to do it:
 - Wait for a response from the maintainers of the project. 
 
 ## Next Steps
-Once the issue is assigned to you, it's time to start working on it. Make sure to adhere to our coding and documentation standards.Keep your assigned issue updated with your progress and any challenges you encounter. If you're unable to continue working on the issue for any reason, please let us know as soon as possible.
+Once the issue is assigned to you, it's time to start working on it. Make sure to adhere to our coding and documentation standards. Keep your assigned issue updated with your progress and any challenges you encounter. If you're unable to continue working on the issue for any reason, please let us know as soon as possible.
 
 ## Request to Work on Stalled Issues
 If an issue has been assigned to someone else and there have been no updates or activity for more than a week, you may request to work on it. This helps keep the project moving and ensures that issues are not left unattended for extended periods.
