@@ -1,10 +1,11 @@
-import inquirer from "inquirer";
 import chalk from "chalk";
+import inquirer from "inquirer";
+import { choices } from "../minimalcommit.config.js";
 
 import {
+  checkIfRepoisGit,
   commitFiles,
   getStagedFiles,
-  checkIfRepoisGit,
   getUnstagedFiles,
   stageFiles,
 } from "./commands.js";
@@ -124,18 +125,7 @@ const addCommit = async () => {
         name: "type",
         message: "Howdy 👋, What type of changes have you made?",
         type: "list",
-        choices: [
-          "✨ feat",
-          "🐛 fix",
-          "💥 break",
-          "♻️ ref",
-          "🧪 test",
-          "🔖 ver",
-          "📝 docs",
-          "🎨 style",
-          "🛠 config",
-          "📦 misc",
-        ],
+        choices: choices,
       },
       {
         name: "message",
