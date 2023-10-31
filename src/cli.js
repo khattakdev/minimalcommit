@@ -14,30 +14,32 @@ function logOption(title, description) {
 }
 
 async function cli() {
+  //if there's help argument passed, show the info info and exit
+  if (process.argv[2] === "--help" || process.argv[2] === "-h") {
+    const options = [
+      { name: "--help , -h", desc: "Show help", type: "boolean" },
+      { name: "--version, -v", desc: "Show version number", type: "boolean" },
+      { name: "--types, -t", desc: "Show commit types", type: "boolean" },
+    ];
+    console.log("Command\t\tDescription\t\tType");
+    console.log("-------\t\t-----------\t\t----");
+    options.forEach((option) => {
+      const { name, desc, type } = option;
+      console.log(`${name.padEnd(16)}${desc.padEnd(24)}${type}`);
+    });
+    console.log("\n");
+    process.exit(0);
+  }
+
   const [isGit, stagedFiles] = await Promise.all([
     checkIfRepoisGit(),
     getStagedFiles(),
   ]);
+
   if (isGit && !stagedFiles) {
     await promptToCommit();
   } else if (isGit && stagedFiles) {
-    if (process.argv[2] === "--help" || process.argv[2] === "-h") {
-      const options = [
-        { name: "--help , -h", desc: "Show help", type: "boolean" },
-        { name: "--version, -v", desc: "Show version number", type: "boolean" },
-        { name: "--types, -t", desc: "Show commit types", type: "boolean" },
-      ];
-      console.log("Command\t\tDescription\t\tType");
-      console.log("-------\t\t-----------\t\t----");
-      options.forEach((option) => {
-        const { name, desc, type } = option;
-        console.log(`${name.padEnd(16)}${desc.padEnd(24)}${type}`);
-      });
-      console.log("\n");
-      process.exit(0);
-    } else {
-      await addCommit();
-    }
+    await addCommit();
   }
 }
 
